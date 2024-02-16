@@ -3,6 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+def count_values(dataframe, column_list):
+    for column in column_list:
+        print(f"Value counts for {column}:")
+        print(dataframe[column].value_counts())
+        print("-" * 20)
+
 def main():
     df = pd.read_csv("Telecom Dataset.csv")
     print(df.shape)
