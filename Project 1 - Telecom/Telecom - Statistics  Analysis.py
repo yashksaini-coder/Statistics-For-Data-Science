@@ -177,17 +177,6 @@ plt.axvline(median_value, color='green', linestyle='dashed', linewidth=2, label=
 plt.legend()
 plt.show()
 
-
-# ### The children want phones that have good internal memory, battery power and RAM
-# ### Consider the phones that have internal memory, battery power and RAM greater than or equal to their respective mean values
-# ### Create a logical condition for this situation and store the logical values as "con5"
-# 
-# 
-# 
-
-# In[39]:
-
-
 # Calculate the mean values for Int_Mem, Bty_Pwr, and RAM features
 mean_int_mem = df['Int_Mem'].mean()
 mean_bty_pwr = df['Bty_Pwr'].mean()
@@ -195,36 +184,11 @@ mean_ram = df['RAM'].mean()
 
 # Create the logical condition con5
 con5 = (df['Int_Mem'] >= mean_int_mem) & (df['Bty_Pwr'] >= mean_bty_pwr) & (df['RAM'] >= mean_ram)
-
-
-# In[40]:
-
-
-con5.head()
-
-
-# Observations
-# 
-# The features "Int_Mem", "Bty_Pwr" and "RAM" are respectively the internal memory, battery power and RAM of the phones.
-# 
-# The respective means have been selected as thresholds in this case.
-# 
-# .In case it is too strict, we can choose the respective medians as thresholds
-
-# # Task 7 - Obtain the logical conditions for the features "Depth" and "Weight"
-
-# In[41]:
-
+print(con5.head())
 
 # Let's tackle these features: "Depth", "Weight"
 l6 = ["Depth", "Weight"]
-count_values(df,l6)
-
-
-# ### Create a histogram of the "Depth" feature and also show the mean and the median
-
-# In[42]:
-
+print(count_values(df,l6))
 
 # Plotting the histogram
 plt.figure(figsize=(10, 6))
@@ -232,7 +196,6 @@ plt.hist(df['Depth'], bins=20, color='skyblue', edgecolor='black')
 plt.title('Histogram of Depth Feature')
 plt.xlabel('Depth of the Mobile Phone (Depth)')
 plt.ylabel('Frequency')
-
 # Adding mean and median lines
 mean_value = df['Depth'].mean()
 median_value = df['Depth'].median()
@@ -240,13 +203,6 @@ plt.axvline(mean_value, color='red', linestyle='dashed', linewidth=2, label=f'Me
 plt.axvline(median_value, color='green', linestyle='dashed', linewidth=2, label=f'Median: {median_value:.2f}')
 plt.legend()
 plt.show()
-
-
-# ### Create a histogram of the "Weight" feature and also show the mean and the median
-# 
-
-# In[43]:
-
 
 # Plotting the histogram
 plt.figure(figsize=(10, 6))
