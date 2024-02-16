@@ -56,7 +56,8 @@ Feel free to explore each project's directory for detailed documentation, code, 
    - Follow the documentation within each project for specific instructions on running and analyzing the statistical analyses.
 
 6. **Contribute (Optional):-**
-   - If you plan to contribute or make changes, it's recommended to [fork](https://github.com/yashksaini-coder/Statistics-For-Data-Science/fork) the repository and create a new branch for your modifications.
+    - Contributions to the projects are welcome! Whether you find an improvement, want to report a bug, or have a new statistical analysis idea, please open an issue or submit a pull request.
+   - If you plan to contribute or make changes, it's recommended to fork the repository and create a new branch for your modifications.
    - After making changes, submit a pull request to the original repository.
 
 7. **Run Jupyter Notebooks (If Applicable):-**
@@ -68,3 +69,4 @@ Feel free to explore each project's directory for detailed documentation, code, 
      ```bash
      jupyter-notebook
      ```
+
