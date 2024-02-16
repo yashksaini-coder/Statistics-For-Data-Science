@@ -210,7 +210,6 @@ plt.hist(df['Weight'], bins=20, color='skyblue', edgecolor='black')
 plt.title('Histogram of Weight Feature')
 plt.xlabel('Weight of the Mobile Phone (Weight)')
 plt.ylabel('Frequency')
-
 # Adding mean and median lines
 mean_value = df['Weight'].mean()
 median_value = df['Weight'].median()
@@ -219,50 +218,16 @@ plt.axvline(median_value, color='green', linestyle='dashed', linewidth=2, label=
 plt.legend()
 plt.show()
 
-
-# ### The children want phones that are light weight and slim
-# ### Consider the phones that have depth and weight less than or equal to the respective median values in the data set
-# ### Create a logical condition for this situation and store the logical values as "con6"
-# 
-
-# In[44]:
-
-
 # Calculate the median values for Depth and Weight features
 median_depth = df['Depth'].median()
 median_weight = df['Weight'].median()
-
 # Create the logical condition con6
 con6 = (df['Depth'] <= median_depth) & (df['Weight'] <= median_weight)
-
-
-# In[45]:
-
-
-con6.head()
-
-
-# Observations:
-# 
-# The features "Depth" and "Weight" are respectively the depth of the phone and the weight of the phone.
-# 
-# The respective medians have been selected as thresholds in this case.
-# 
-# In case it is too strict, we can choose the respective means as thresholds.
-
-# # Task 8 - Subset the data based on all the logical conditions
-
-# In[46]:
-
+print(con6.head())
 
 # Subset the DataFrame using logical conditions
 df1 = df[con1 & con2 & con3 & con4 & con5 & con6]
-
-
-# In[47]:
-
-
-df1.head()
+print(df1.head())
 
 
 
