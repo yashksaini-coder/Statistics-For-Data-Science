@@ -141,7 +141,6 @@ plt.hist(df['Int_Mem'], bins=20,color='skyblue',edgecolor='black')
 plt.title('Histogram of Int_Mem feature')
 plt.xlabel('Internal Memory (Int Mem)')
 plt.ylabel('Frequency')
-
 mean_value = df['Int_Mem'].mean()
 median_value = df['Int_Mem'].median()
 plt.axvline(mean_value, color='red', linestyle='dashed', linewidth=2, label=f'Mean: {mean_value:.2f}')
@@ -149,20 +148,12 @@ plt.axvline(median_value, color='green', linestyle='dashed', linewidth=2, label=
 plt.legend()
 plt.show()
 
-
-# ### Create a histogram of the "Bty_Pwr" feature and also show the mean and the median
-# 
-
-# In[37]:
-
-
 # Plotting the histogram
 plt.figure(figsize=(10, 6))
 plt.hist(df['Bty_Pwr'], bins=20, color='skyblue', edgecolor='black')
 plt.title('Histogram of Bty_Pwr Feature')
 plt.xlabel('Battery Power (Bty_Pwr)')
 plt.ylabel('Frequency')
-
 # Adding mean and median lines
 mean_value = df['Bty_Pwr'].mean()
 median_value = df['Bty_Pwr'].median()
@@ -170,17 +161,6 @@ plt.axvline(mean_value, color='red', linestyle='dashed', linewidth=2, label=f'Me
 plt.axvline(median_value, color='green', linestyle='dashed', linewidth=2, label=f'Median: {median_value:.2f}')
 plt.legend()
 plt.show()
-
-
-
-
-# ### Create a histogram of the "RAM" feature and also show the mean and the median
-# 
-# 
-# 
-
-# In[38]:
-
 
 # Plotting the histogram
 plt.figure(figsize=(10, 6))
