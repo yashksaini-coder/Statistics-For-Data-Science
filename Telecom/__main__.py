@@ -36,7 +36,7 @@ def main():
     print(count_values(df,l2))
 
     df['Px'] = df['Px_h'] + df['Px_w']
-    print(df['Px'].value_counts)()
+    print(df['Px'].value_counts())
 
     # Create a histogram of the "Px" feature and also show the mean and the median
     # Plotting the histogram
