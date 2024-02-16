@@ -240,9 +240,4 @@ print(deviations.head())
 
 # Sort the "deviations" Series in descending order
 deviations_sorted = deviations.sort_values(ascending=False)
-
-
-# In[54]:
-
-
-deviations_sorted.head()
+print(deviations_sorted.head())
