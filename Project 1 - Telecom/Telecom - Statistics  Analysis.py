@@ -228,58 +228,15 @@ print(con6.head())
 # Subset the DataFrame using logical conditions
 df1 = df[con1 & con2 & con3 & con4 & con5 & con6]
 print(df1.head())
-
-
-
-# In[48]:
-
-
-# Get the dimensions of the dataframe
-df1.shape
-
-
-# In[49]:
-
+print(df1.shape)
 
 # Sort the dataframe according to the "Price" feature in ascending order and display it
 df1_sorted = df1.sort_values(by='Price',ascending=True)
-
-
-# In[50]:
-
-
-df1_sorted.head()
-
-
-# Observations:
-# 
-# Based on all the logical conditions obtained through analysis of the features, we are left with three phones.
-# 
-# The most expensive of these phones is the "TYS938L" model and the least expensive is the "TVF078Y" model.
-# 
-# We could let the children choose from these three phones as per their preferences.
-
-# # Task 9 - Study the variability of the features in the original data set
-
-# ### Calculate the ratio of the standard deviation to the mean for all the numerical features in the dataframe
-# ### Store these values in a new series wherein the rows are the features and the only column is the calculated ratio
-# 
-
-# In[51]:
-
+print(df1_sorted.head())
 
 # Calculate the ratio of standard deviation to mean for all numerical features
 deviations = (df1_sorted.select_dtypes(include='number').std() / df1_sorted.select_dtypes(include='number').mean()).rename("Ratio")
-
-
-# In[52]:
-
-
-deviations.head()
-
-
-# In[53]:
-
+print(deviations.head())
 
 # Sort the "deviations" Series in descending order
 deviations_sorted = deviations.sort_values(ascending=False)
