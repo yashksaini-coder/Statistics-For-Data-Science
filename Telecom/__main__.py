@@ -10,7 +10,7 @@ def count_values(dataframe, column_list):
         print("-" * 20)
 
 def main():
-    df = pd.read_csv("Telecom.csv")
+    df = pd.read_csv("D:\Statistical Analysis\Telecom\Telecom.csv")
     print(df.shape)
     print(df.head())
     print(df.columns)
