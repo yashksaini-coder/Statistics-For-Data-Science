@@ -9,7 +9,7 @@ This repository serves as a hub for various projects that delve into the intrica
 
 | Project Name | Description |
 |--------------|-------------|
-| **TelecomTrendLens** | Explore the dynamic trends in the telecom sector using statistical analysis techniques. |
+| **TelecomTrends** | Explore the dynamic trends in the telecom sector using statistical analysis techniques. |
 
 
 ## How to Use
