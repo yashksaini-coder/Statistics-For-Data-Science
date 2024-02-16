@@ -23,31 +23,12 @@ count_values(df,l)
 ### Create a logical condition for this situation and store the logical values as "con1"
 con1 = (df['Blue'] == 'yes') & (df['Wi_Fi'] == 'yes') & (df['Tch_Scr'] == 'yes') & (df['Ext_Mem'] == 'yes')
 print(con1.head())
+
 l2= ['Px_h','Px_w']
-
-
-# In[16]:
-
-
-# Let's tackle these features: "Px_h", "Px_w"
 count_values(df,l2)
 
-
-# In[17]:
-
-
-# Create a new feature called "Px" which stores the total resolution of the screen
 df['Px'] = df['Px_h'] + df['Px_w']
-
-
-# In[18]:
-
-
-df['Px'].value_counts()
-
-
-# In[19]:
-
+print(df['Px'].value_counts)()
 
 # Create a histogram of the "Px" feature and also show the mean and the median
 # Plotting the histogram
@@ -56,7 +37,6 @@ plt.hist(df['Px'], bins=20, color='skyblue', edgecolor='black')
 plt.title('Histogram of Px Feature')
 plt.xlabel('Total Resolution of the Screen (Px)')
 plt.ylabel('Frequency')
-
 # Adding mean and median lines
 mean_value = df['Px'].mean()
 median_value = df['Px'].median()
@@ -66,24 +46,14 @@ plt.legend()
 plt.show()
 
 
-# ### The children want phones that have good screen resolutions
-# ### Consider the phones that have screen resolutions greater than or equal to the median value in the data set
-# ### Create a logical condition for this situation and store the logical values as "con2"
-
-# In[20]:
-
+### The children want phones that have good screen resolutions
+### Consider the phones that have screen resolutions greater than or equal to the median value in the data set
+### Create a logical condition for this situation and store the logical values as "con2"
 
 # Calculate the median screen resolution
 median_resolution = df['Px'].median()
-
-# Create the logical condition con2
 con2 = df['Px'] >= median_resolution
-
-
-# In[21]:
-
-
-con2.head()
+print(con2.head())
 
 
 
